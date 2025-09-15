@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import booksImage from "@/assets/books-image.png";
 import inesPhoto from "@/assets/ines-medeiros.jpg";
 import patyPhoto from "@/assets/paty.jpg";
 import neidePhoto from "@/assets/neide-venancio.jpg";
@@ -40,6 +41,17 @@ const HeroSection = () => {
               30 Protocolos Fonoaudiológicos
               <span className="block text-white mt-2">TEA Infantil</span>
             </h1>
+
+            {/* Books Image */}
+            <div className="flex justify-center sm:justify-start">
+              <img 
+                src={booksImage} 
+                alt="Coleção de 30 protocolos fonoaudiológicos para TEA infantil"
+                className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-contain hover-lift animate-fade-in-up"
+                style={{ animationDelay: "0.5s" }}
+                loading="eager"
+              />
+            </div>
 
             {/* Subheadline */}
             <p className="text-lg text-white/90 leading-relaxed">
