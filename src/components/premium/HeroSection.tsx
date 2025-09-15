@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import inesPhoto from "@/assets/ines-medeiros.jpg";
+import patyPhoto from "@/assets/paty.jpg";
+import neidePhoto from "@/assets/neide-venancio.jpg";
+import claudiaPhoto from "@/assets/claudia.jpg";
+import ritaPhoto from "@/assets/rita.jpg";
 const HeroSection = () => {
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing');
@@ -8,6 +13,7 @@ const HeroSection = () => {
       pricingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const heroAvatars = [inesPhoto, patyPhoto, neidePhoto, claudiaPhoto, ritaPhoto];
 
   return <section className="relative min-h-screen bg-hero-blue overflow-hidden">
       {/* Floating Elements */}
@@ -82,7 +88,15 @@ const HeroSection = () => {
             {/* Social Proof */}
             <div className="flex items-center gap-4 pt-4">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4, 5].map(i => <div key={i} className="w-8 h-8 bg-gradient-primary rounded-full border-2 border-white" />)}
+                {heroAvatars.map((src, idx) => (
+                  <img
+                    key={idx}
+                    src={src}
+                    alt={`Profissional ${idx + 1} aplicando protocolos`}
+                    className="w-8 h-8 rounded-full ring-2 ring-white object-cover"
+                    loading="lazy"
+                  />
+                ))}
               </div>
               <div>
                 <div className="flex items-center gap-1">
