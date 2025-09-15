@@ -11,11 +11,12 @@ const HeroSection = () => {
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
+      pricingSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
   const heroAvatars = [inesPhoto, patyPhoto, neidePhoto, claudiaPhoto, ritaPhoto];
-
   return <section className="relative min-h-screen bg-hero-blue overflow-hidden">
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-16 h-16 bg-accent/20 rounded-full animate-float" />
@@ -44,13 +45,9 @@ const HeroSection = () => {
 
             {/* Books Image */}
             <div className="flex justify-center sm:justify-start">
-              <img 
-                src={booksImage} 
-                alt="Coleção de 30 protocolos fonoaudiológicos para TEA infantil"
-                className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-contain hover-lift animate-fade-in-up"
-                style={{ animationDelay: "0.5s" }}
-                loading="eager"
-              />
+              <img src={booksImage} alt="Coleção de 30 protocolos fonoaudiológicos para TEA infantil" className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-contain hover-lift animate-fade-in-up" style={{
+              animationDelay: "0.5s"
+            }} loading="eager" />
             </div>
 
             {/* Subheadline */}
@@ -77,12 +74,7 @@ const HeroSection = () => {
             {/* CTA Section */}
             <div className="space-y-4 pt-4">
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  variant="primary" 
-                  size="lg" 
-                  className="group whitespace-normal text-center sm:whitespace-nowrap"
-                  onClick={scrollToPricing}
-                >
+                <Button variant="primary" size="lg" onClick={scrollToPricing} className="group whitespace-normal text-center sm:whitespace-nowrap font-extrabold text-white bg-gray-950 hover:bg-gray-800 rounded-none">
                   QUERO APLICAR AGORA
                   <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -100,15 +92,7 @@ const HeroSection = () => {
             {/* Social Proof */}
             <div className="flex items-center gap-4 pt-4">
               <div className="flex -space-x-2">
-                {heroAvatars.map((src, idx) => (
-                  <img
-                    key={idx}
-                    src={src}
-                    alt={`Profissional ${idx + 1} aplicando protocolos`}
-                    className="w-8 h-8 rounded-full ring-2 ring-white object-cover"
-                    loading="lazy"
-                  />
-                ))}
+                {heroAvatars.map((src, idx) => <img key={idx} src={src} alt={`Profissional ${idx + 1} aplicando protocolos`} className="w-8 h-8 rounded-full ring-2 ring-white object-cover" loading="lazy" />)}
               </div>
               <div>
                 <div className="flex items-center gap-1">
