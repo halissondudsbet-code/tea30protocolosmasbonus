@@ -17,10 +17,10 @@ const ProblemSection = () => {
     title: "Insegurança Profissional",
     description: "Dúvidas sobre qual abordagem usar em cada caso"
   }];
-  return <section className="bg-gradient-surface py-[94px]">
+  return <section className="bg-gradient-surface py-0">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-display text-foreground mb-6">
+          <h2 className="text-display text-foreground mb-6 px-0 py-0">
             Você está enfrentando esses <span className="text-destructive">desafios</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
