@@ -89,7 +89,7 @@ const FAQSection = () => {
                 Enviar E-mail
               </a>
               <a 
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/55759881114545"
                 className="inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-colors"
               >
                 WhatsApp
