@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { MessageCircle, Clock } from "lucide-react";
+import templateAfcCover from "@/assets/template-afc-cover.png";
 interface FormData {
   nome: string;
   telefone: string;
@@ -64,8 +66,8 @@ const WelcomeBonusPopup = () => {
       });
       if (response.ok) {
         toast({
-          title: "Cadastro realizado!",
-          description: "Você receberá seu brinde de boas-vindas em breve!"
+          title: "🎉 Cadastro realizado!",
+          description: "Você receberá seu Template AFC GRÁTIS no WhatsApp em instantes!"
         });
         setIsOpen(false);
         reset();
@@ -83,17 +85,54 @@ const WelcomeBonusPopup = () => {
     }
   };
   return <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle className="text-center text-xl font-bold text-primary">
-            🎁 Brinde de Boas-Vindas!
+      <DialogContent className="sm:max-w-lg overflow-hidden">
+        {/* Badge de Tempo Limitado */}
+        <div className="absolute top-4 right-4 z-10">
+          <div className="inline-flex items-center gap-1 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+            <Clock className="w-3 h-3" />
+            TEMPO LIMITADO
+          </div>
+        </div>
+
+        <DialogHeader className="space-y-6 pb-2">
+          <DialogTitle className="text-center text-2xl font-bold text-foreground">
+            BRINDE ESPECIAL POR TEMPO LIMITADO
           </DialogTitle>
         </DialogHeader>
         
-        <div className="text-center mb-4">
-          <p className="text-muted-foreground">
-            Cadastre seus dados e receba um <span className="font-semibold text-primary">brinde especial</span> de boas-vindas!
-          </p>
+        <div className="flex flex-col items-center space-y-4">
+          {/* Imagem do Template AFC */}
+          <div className="relative">
+            <img 
+              src={templateAfcCover} 
+              alt="Template de Avaliação Funcional do Comportamento" 
+              className="w-48 h-auto rounded-lg shadow-lg hover-scale"
+            />
+            <div className="absolute -top-2 -right-2 bg-accent text-accent-foreground px-2 py-1 rounded-full text-xs font-bold">
+              GRÁTIS
+            </div>
+          </div>
+
+          {/* Valor Cortado */}
+          <div className="text-center">
+            <div className="text-lg text-muted-foreground line-through mb-1">
+              De R$ 49,90
+            </div>
+            <div className="text-2xl font-bold text-accent">
+              TOTALMENTE GRÁTIS
+            </div>
+          </div>
+
+          {/* Descrição com WhatsApp */}
+          <div className="text-center bg-muted/50 p-4 rounded-lg">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <MessageCircle className="w-5 h-5 text-green-500" />
+              <span className="font-semibold text-foreground">Receba IMEDIATAMENTE no seu WhatsApp</span>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Template completo de Avaliação Funcional do Comportamento para usar em suas sessões
+            </p>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -120,12 +159,12 @@ const WelcomeBonusPopup = () => {
             {errors.telefone && <span className="text-sm text-destructive">{errors.telefone.message}</span>}
           </div>
 
-          <div className="flex gap-2 pt-2">
+          <div className="flex gap-2 pt-4">
             <Button type="button" variant="outline" onClick={() => setIsOpen(false)} className="flex-1">
               Não, obrigado
             </Button>
-            <Button type="submit" disabled={isSubmitting} className="flex-1">
-              {isSubmitting ? "Enviando..." : "Quero o brinde!"}
+            <Button type="submit" disabled={isSubmitting} className="flex-1 bg-accent hover:bg-accent/90">
+              {isSubmitting ? "Enviando..." : "🎁 QUERO MEU BRINDE GRÁTIS!"}
             </Button>
           </div>
         </form>
