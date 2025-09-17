@@ -70,7 +70,7 @@ const PricingSection = () => {
 
                 {/* CTA */}
                 <div className="space-y-4">
-                  <a href="https://pay.sunize.com.br/TbYUEHHz" target="_blank" rel="noopener noreferrer" className="block">
+                  <a href="https://pay.sunize.com.br/TyCgBKTq" target="_blank" rel="noopener noreferrer" className="block">
                     <Button variant="accent" size="xl" className="w-full text-lg animate-pulse-slow group whitespace-normal text-center leading-snug mx-0 px-[27px] py-0 my-[7px]">
                       <Zap className="w-5 h-5 mr-2" />
                       SIM! QUERO APLICAR AGORA

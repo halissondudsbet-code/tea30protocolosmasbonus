@@ -159,7 +159,7 @@ const WelcomeBonusPopup = () => {
             <Button type="button" variant="outline" onClick={() => setIsOpen(false)} className="flex-1 h-9 text-sm">
               Não, obrigado
             </Button>
-            <Button type="submit" disabled={isSubmitting} className="flex-1 bg-accent hover:bg-accent/90 h-9 text-xs mx-0 py-0 my-0 px-0">
+            <Button type="submit" disabled={isSubmitting} className="flex-1 bg-accent hover:bg-accent/90 h-9 text-xs">
               {isSubmitting ? "Enviando..." : "🎁 QUERO MEU BRINDE GRÁTIS!"}
             </Button>
           </div>
