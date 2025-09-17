@@ -86,17 +86,17 @@ const WelcomeBonusPopup = () => {
   };
   return <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="sm:max-w-lg overflow-hidden">
-        {/* Badge de Tempo Limitado */}
-        <div className="absolute top-4 right-4 z-10">
-          <div className="inline-flex items-center gap-1 bg-accent text-accent-foreground rounded-full text-xs font-bold animate-pulse px-[17px] py-[7px] my-0 mx-0">
-            <Clock className="w-3 h-3" />
-            TEMPO LIMITADO
+        <DialogHeader className="space-y-4 pb-2 pt-4">
+          {/* Badge de Tempo Limitado */}
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-1 bg-accent text-accent-foreground rounded-full text-xs font-bold animate-pulse px-3 py-1">
+              <Clock className="w-3 h-3" />
+              TEMPO LIMITADO
+            </div>
           </div>
-        </div>
-
-        <DialogHeader className="space-y-6 pb-2">
-          <DialogTitle className="text-center text-2xl font-bold text-foreground">
-            BRINDE ESPECIAL POR TEMPO LIMITADO
+          
+          <DialogTitle className="text-center text-xl sm:text-2xl font-bold text-foreground leading-tight">
+            BRINDE ESPECIAL POR<br className="sm:hidden" /> TEMPO LIMITADO
           </DialogTitle>
         </DialogHeader>
         
