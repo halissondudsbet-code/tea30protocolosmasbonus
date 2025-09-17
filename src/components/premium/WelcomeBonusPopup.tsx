@@ -85,8 +85,8 @@ const WelcomeBonusPopup = () => {
     }
   };
   return <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-lg overflow-hidden">
-        <DialogHeader className="space-y-4 pb-2 pt-4">
+      <DialogContent className="sm:max-w-lg max-h-[95vh] overflow-y-auto">
+        <DialogHeader className="space-y-2 pb-1 pt-2">
           {/* Badge de Tempo Limitado */}
           <div className="flex justify-center">
             <div className="inline-flex items-center gap-1 bg-accent text-accent-foreground rounded-full text-xs font-bold animate-pulse px-3 py-1">
@@ -95,15 +95,15 @@ const WelcomeBonusPopup = () => {
             </div>
           </div>
           
-          <DialogTitle className="text-center text-xl sm:text-2xl font-bold text-foreground leading-tight">
+          <DialogTitle className="text-center text-lg sm:text-xl font-bold text-foreground leading-tight">
             BRINDE ESPECIAL POR<br className="sm:hidden" /> TEMPO LIMITADO
           </DialogTitle>
         </DialogHeader>
         
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-3">
           {/* Imagem do Template AFC */}
           <div className="relative">
-            <img src={templateAfcCover} alt="Template de Avaliação Funcional do Comportamento" className="w-48 h-auto rounded-lg shadow-lg hover-scale" />
+            <img src={templateAfcCover} alt="Template de Avaliação Funcional do Comportamento" className="w-40 h-auto rounded-lg shadow-lg" />
             <div className="absolute -top-2 -right-2 bg-accent text-accent-foreground px-2 py-1 rounded-full text-xs font-bold">
               GRÁTIS
             </div>
@@ -111,55 +111,55 @@ const WelcomeBonusPopup = () => {
 
           {/* Valor Cortado */}
           <div className="text-center">
-            <div className="text-lg text-muted-foreground line-through mb-1">
+            <div className="text-base text-muted-foreground line-through mb-1">
               De R$ 49,90
             </div>
-            <div className="text-2xl font-bold text-accent">
+            <div className="text-xl font-bold text-accent">
               TOTALMENTE GRÁTIS
             </div>
           </div>
 
           {/* Descrição com WhatsApp */}
-          <div className="text-center bg-muted/50 p-4 rounded-lg">
+          <div className="text-center bg-muted/50 p-3 rounded-lg">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <MessageCircle className="w-5 h-5 text-green-500" />
-              <span className="font-semibold text-foreground">Receba IMEDIATAMENTE no seu WhatsApp</span>
+              <MessageCircle className="w-4 h-4 text-green-500" />
+              <span className="font-semibold text-foreground text-sm">Receba IMEDIATAMENTE no seu WhatsApp</span>
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs text-muted-foreground">
               Template completo de Avaliação Funcional do Comportamento para usar em suas sessões
             </p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 mt-4">
           <div>
-            <Label htmlFor="nome">Nome</Label>
+            <Label htmlFor="nome" className="text-sm">Nome</Label>
             <Input id="nome" {...register("nome", {
             required: "Nome é obrigatório",
             minLength: {
               value: 2,
               message: "Nome deve ter pelo menos 2 caracteres"
             }
-          })} placeholder="Digite seu nome completo" />
-            {errors.nome && <span className="text-sm text-destructive">{errors.nome.message}</span>}
+          })} placeholder="Digite seu nome completo" className="h-9" />
+            {errors.nome && <span className="text-xs text-destructive">{errors.nome.message}</span>}
           </div>
 
           <div>
-            <Label htmlFor="telefone">Whatsapp</Label>
+            <Label htmlFor="telefone" className="text-sm">Whatsapp</Label>
             <Input id="telefone" {...register("telefone", {
             required: "Telefone é obrigatório",
             validate: value => validatePhone(value) || "Formato inválido. Use (XX) 9XXXX-XXXX"
           })} placeholder="(11) 99999-9999" onChange={e => {
             e.target.value = formatPhoneNumber(e.target.value);
-          }} maxLength={15} />
-            {errors.telefone && <span className="text-sm text-destructive">{errors.telefone.message}</span>}
+          }} maxLength={15} className="h-9" />
+            {errors.telefone && <span className="text-xs text-destructive">{errors.telefone.message}</span>}
           </div>
 
-          <div className="flex gap-2 pt-4">
-            <Button type="button" variant="outline" onClick={() => setIsOpen(false)} className="flex-1">
+          <div className="flex gap-2 pt-2">
+            <Button type="button" variant="outline" onClick={() => setIsOpen(false)} className="flex-1 h-9 text-sm">
               Não, obrigado
             </Button>
-            <Button type="submit" disabled={isSubmitting} className="flex-1 bg-accent hover:bg-accent/90">
+            <Button type="submit" disabled={isSubmitting} className="flex-1 bg-accent hover:bg-accent/90 h-9 text-xs">
               {isSubmitting ? "Enviando..." : "🎁 QUERO MEU BRINDE GRÁTIS!"}
             </Button>
           </div>
