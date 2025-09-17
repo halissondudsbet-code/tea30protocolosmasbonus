@@ -88,7 +88,7 @@ const WelcomeBonusPopup = () => {
       <DialogContent className="sm:max-w-lg overflow-hidden">
         {/* Badge de Tempo Limitado */}
         <div className="absolute top-4 right-4 z-10">
-          <div className="inline-flex items-center gap-1 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+          <div className="inline-flex items-center gap-1 bg-accent text-accent-foreground rounded-full text-xs font-bold animate-pulse px-[17px] py-[7px] my-0 mx-0">
             <Clock className="w-3 h-3" />
             TEMPO LIMITADO
           </div>
@@ -103,11 +103,7 @@ const WelcomeBonusPopup = () => {
         <div className="flex flex-col items-center space-y-4">
           {/* Imagem do Template AFC */}
           <div className="relative">
-            <img 
-              src={templateAfcCover} 
-              alt="Template de Avaliação Funcional do Comportamento" 
-              className="w-48 h-auto rounded-lg shadow-lg hover-scale"
-            />
+            <img src={templateAfcCover} alt="Template de Avaliação Funcional do Comportamento" className="w-48 h-auto rounded-lg shadow-lg hover-scale" />
             <div className="absolute -top-2 -right-2 bg-accent text-accent-foreground px-2 py-1 rounded-full text-xs font-bold">
               GRÁTIS
             </div>
