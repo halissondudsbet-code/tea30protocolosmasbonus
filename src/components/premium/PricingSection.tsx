@@ -47,7 +47,7 @@ const PricingSection = () => {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-3xl font-bold mb-4">
-                    30 Protocolos Fonoaudiológicos TEA Infantil
+                    27 Protocolos Fonoaudiológicos TEA Infantil + Bônus
                   </h3>
                   <p className="text-primary-foreground/90 text-lg">
                     Material completo + 4 bônus exclusivos
@@ -92,7 +92,7 @@ const PricingSection = () => {
                 <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
                   <div className="flex items-center gap-3 mb-3">
                     <CheckCircle className="w-5 h-5 text-accent-light" />
-                    <span className="font-semibold">30 Protocolos Fonoaudiológicos</span>
+                    <span className="font-semibold">27 Protocolos Fonoaudiológicos</span>
                     <span className="text-sm bg-white/20 px-2 py-1 rounded">R$ 97,00</span>
                   </div>
                   

@@ -18,7 +18,7 @@ const FAQSection = () => {
     },
     {
       question: "O material é só teórico ou traz atividades práticas para aplicar nas sessões?",
-      answer: "O manual é 100% prático. Você terá 30 protocolos clínicos estruturados passo a passo, além de cartões, pranchas de comunicação, fichas e checklists para aplicar em sessão sem precisar criar nada do zero. Cada protocolo vem com instruções detalhadas de aplicação."
+      answer: "O manual é 100% prático. Você terá 27 protocolos clínicos estruturados + bônus passo a passo, além de cartões, pranchas de comunicação, fichas e checklists para aplicar em sessão sem precisar criar nada do zero. Cada protocolo vem com instruções detalhadas de aplicação."
     },
     {
       question: "O material é em PDF mesmo? Vou poder imprimir?",

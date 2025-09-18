@@ -8,8 +8,8 @@ const ReceiveSection = () => {
   }, {
     icon: <Target className="w-8 h-8 text-primary" />,
     title: "PARTE II - PROTOCOLOS TERAPÊUTICOS",
-    description: "30 protocolos organizados por níveis de complexidade comunicativa",
-    items: ["Nível Pré-Linguístico (10 protocolos)", "Nível de Primeiras Palavras (10 protocolos)", "Nível de Pragmática Infantil (10 protocolos)"]
+    description: "27 protocolos organizados por níveis de complexidade comunicativa",
+    items: ["Nível Pré-Linguístico (9 protocolos)", "Nível de Primeiras Palavras (9 protocolos)", "Nível de Pragmática Infantil (9 protocolos)"]
   }, {
     icon: <TrendingUp className="w-8 h-8 text-primary" />,
     title: "PARTE III - GENERALIZAÇÃO",
@@ -40,7 +40,7 @@ const ReceiveSection = () => {
             Veja tudo o que <span className="text-gradient">Você vai Receber</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            30 Protocolos Fonoaudiológicos TEA Infantil organizados em 3 partes fundamentais
+            27 Protocolos Fonoaudiológicos TEA Infantil + Bônus organizados em 3 partes fundamentais
           </p>
         </div>
 

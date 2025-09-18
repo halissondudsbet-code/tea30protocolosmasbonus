@@ -10,7 +10,7 @@ const SolutionSection = () => {
 
   const features = [{
     icon: <BookOpen className="w-6 h-6" />,
-    title: "30 Protocolos Completos",
+    title: "27 Protocolos Completos + Bônus",
     description: "Estruturados passo a passo, baseados em evidências científicas"
   }, {
     icon: <Target className="w-6 h-6" />,

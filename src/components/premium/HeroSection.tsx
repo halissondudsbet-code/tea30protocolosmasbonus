@@ -39,13 +39,13 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight break-words">
-              30 Protocolos Fonoaudiológicos
-              <span className="block text-white mt-2">TEA Infantil</span>
+              27 Protocolos Fonoaudiológicos
+              <span className="block text-white mt-2">TEA Infantil + Bônus</span>
             </h1>
 
             {/* Books Image */}
             <div className="flex justify-center sm:justify-start">
-              <img src={booksImage} alt="Coleção de 30 protocolos fonoaudiológicos para TEA infantil" className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-contain hover-lift animate-fade-in-up" style={{
+              <img src={booksImage} alt="Coleção de 27 protocolos fonoaudiológicos para TEA infantil + bônus" className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-contain hover-lift animate-fade-in-up" style={{
               animationDelay: "0.5s"
             }} loading="eager" />
             </div>
@@ -112,7 +112,7 @@ const HeroSection = () => {
               
               {/* Floating Stats */}
               <div className="absolute -top-4 -left-4 glass rounded-2xl p-4 animate-float px-[22px] py-[23px]">
-                <div className="text-2xl font-bold text-primary py-px px-[4px]">30</div>
+                <div className="text-2xl font-bold text-primary py-px px-[4px]">27</div>
                 <div className="text-sm text-muted-foreground">Protocolos</div>
               </div>
               
